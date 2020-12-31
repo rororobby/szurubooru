@@ -85,6 +85,15 @@ user@host:szuru$ docker-compose down
     additional host has access contents to the `/data` volume mounted in the
     backend.
 
+    ```nginx
+    server {
+      listen [::]:80;
+      listen 80;
+      root /var/local/szurubooru/data;
+      server_name static.example.com;
+    }
+    ```
+
 3. **Setting a specific base URI for proxying**
 
     Some users may wish to access the service at a different base URI, such
