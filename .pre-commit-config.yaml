@@ -32,7 +32,7 @@ repos:
         -   toml
 
 -   repo: https://github.com/prettier/prettier
-    rev: '2.1.1'
+    rev: '2.2.1'
     hooks:
     -   id: prettier
         files: client/js/
