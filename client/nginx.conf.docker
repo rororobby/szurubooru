@@ -58,7 +58,7 @@ http {
         }
 
         location /data/ {
-            rewrite ^/data/(.*) /$1 break;
+            rewrite ^/data/(.*) "$scheme://cdn.rororobby.ml/$1" break;
             root /data;
 
             sendfile on;
