@@ -61,7 +61,7 @@ repos:
     hooks:
     -   id: docker-build-client
         name: Docker - build client
-        entry: bash -c 'docker build client/'
+        entry: bash -c 'sudo docker build client/'
         language: system
         types: [file]
         files: client/
@@ -69,7 +69,7 @@ repos:
 
     -   id: docker-build-server
         name: Docker - build server
-        entry: bash -c 'docker build server/'
+        entry: bash -c 'sudo docker build server/'
         language: system
         types: [file]
         files: server/
@@ -77,7 +77,7 @@ repos:
 
     -   id: pytest
         name: pytest
-        entry: bash -c 'docker run --rm -t $(docker build --target testing -q server/) szurubooru/'
+        entry: bash -c 'sudo docker run --rm -t $(docker build --target testing -q server/) szurubooru/'
         language: system
         types: [python]
         files: server/szurubooru/
@@ -87,7 +87,7 @@ repos:
 
     -   id: pytest-cov
         name: pytest
-        entry: bash -c 'docker run --rm -t $(docker build --target testing -q server/) --cov-report=term-missing:skip-covered --cov=szurubooru szurubooru/'
+        entry: bash -c 'sudo docker run --rm -t $(docker build --target testing -q server/) --cov-report=term-missing:skip-covered --cov=szurubooru szurubooru/'
         language: system
         types: [python]
         files: server/szurubooru/

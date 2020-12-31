@@ -1,6 +1,6 @@
 `szurubooru` uses REST API for all operations.
 
-
+This REST API will eventually be phased out for a GraphQL API with OAuth user authentication.
 
 # Table of contents
 
